@@ -1,18 +1,19 @@
 const express = require('express')
 const https = require('https')
 const app = express()
-const port = 443
+
 
 app.get('/', (request, response) => {
     get('1002475', response)
 })
 
-app.listen(port, (err) => {
+var port = 
+app.listen((process.env.PORT || 8000), (err) => {
     if (err) {
-        return console.log('something bad happened', err)
+        return console.log('something bad happened', err);
     }
 
-    console.log(`server is listening on ${port}`)
+    console.log('server is listening on '+process.env.PORT);
 })
 
 function get(stop, response) {
