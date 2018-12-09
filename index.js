@@ -38,7 +38,8 @@ function get(stop, response) {
         resp.on('end', () => {
             let wmata = JSON.parse(data)
             let stopName = wmata.StopName;
-            let result = 'Departures for ' + stopName + '.';
+            let result = ''
+            // result += 'Departures for ' + stopName + '.';
             let predictions = wmata.Predictions;
             predictions.forEach(prediction => {
                 result += 'Bus ' + prediction.RouteID + ' will depart in ' + prediction.Minutes + ' minutes.';
