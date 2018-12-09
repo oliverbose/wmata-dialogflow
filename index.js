@@ -1,12 +1,13 @@
 const express = require('express')
 const https = require('https')
 const app = express()
+const port = 443
 
 app.get('/', (request, response) => {
     get('1002475', response)
 })
 
-app.listen(process.env.PORT || 8000, (err) => {
+app.listen(port, (err) => {
     if (err) {
         return console.log('something bad happened', err)
     }
