@@ -1,0 +1,23 @@
+{
+  "name": "wmata-service",
+  "version": "1.0.0",
+  "description": "Adapter service for Dialogflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverbose/wmata-dialogflow.git"
+  },
+  "author": "Oliver Bose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliverbose/wmata-dialogflow/issues"
+  },
+  "homepage": "https://github.com/oliverbose/wmata-dialogflow#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "https":"^1.0.0"
+  }
+}
