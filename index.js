@@ -43,12 +43,11 @@ function get(stop, response) {
             predictions.forEach(prediction => {
                 result += 'Bus ' + prediction.RouteID + ' will depart in ' + prediction.Minutes + ' minutes.';
             });
-            var jsonResult = {}
-            jsonResult['speech'] = result;
-            jsonResult['displayText'] = result;
-            jsonResult['source'] = 'WMATA';
+            var jsonResult = {
+                fulfillmentText: result
+            }
 
-            response.send(JSON.stringify(jsonResult))
+            response.send(jsonResult)
 
         });
 
