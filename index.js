@@ -3,7 +3,7 @@ const https = require('https')
 const app = express()
 
 
-app.get('/', (request, response) => {
+app.post('/', (request, response) => {
     get('1002475', response)
 })
 
